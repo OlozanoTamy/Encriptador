@@ -1,0 +1,19 @@
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-basis: 1;
+  width: 80%;
+  gap: 20px;
+}
+
+.izquierdo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.derecho {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
