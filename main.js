@@ -28,14 +28,34 @@ const encriptacion = () => {
     outputText.value = codigo.join("");
 }
 
-const desencriptacion = () => {
+const decodificacion = () => {
     placeholderImage.style.display = 'none';
     outputText.style.display = 'block';
     let mensaje = texto.value.toLowerCase();
+    let decodificado = mensaje
+        .replace(/ai/g, "a")
+        .replace(/enter/g, "e")
+        .replace(/imes/g, "i")
+        .replace(/ober/g, "o")
+        .replace(/ufat/g, "u");
+    outputText.value = decodificado;
+}
+
+const resetear = () => {
+    // Mostrar placeholder de imagen y ocultar outputText
+    placeholderImage.style.display = 'block';
+    outputText.style.display = 'none';
+    // Limpiar el valor de texto y cualquier otro estado que quieras resetear
+    texto.value = "";
+    outputText.value = "";
 }
 
 let encriptar = document.getElementById("encriptar");
 encriptar.addEventListener("click", encriptacion);
 
 let desencriptar = document.getElementById('desencriptar');
-desencriptar.addEventListener("click", desencriptacion);
+desencriptar.addEventListener("click", decodificacion);
+
+
+let resetButton = document.getElementById('resetear');
+resetButton.addEventListener('click', resetear);

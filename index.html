@@ -7,29 +7,31 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Encripto.dev</h1>
     <div class="container">
       <div class="izquierdo">
-        <textarea
-          id="texto"
-          placeholder="Introduce el texto aquí..."
-        ></textarea>
-        <div class="botones">
-          <button id="encriptar">Codificar</button>
-          <button id="desencriptar">Decodificar</button>
+        <textarea id="texto" placeholder="Ingrese el texto aquí..."></textarea>
+        <p class="nota">❗Solo letras minúsculas y sin acentos</p>
+        <div class="buttons">
+          <button id="encriptar">Encriptar</button>
+          <button id="desencriptar">Desencriptar</button>
+          <button id="resetear">Resetear</button>
         </div>
       </div>
-
       <div class="derecho">
-        <img
-          id="placeholderImage"
-          src="ruta/a/tu-imagen.png"
-          alt="Placeholder"
-        />
-        <textarea
-          id="outputText"
-          placeholder="Aquí se mostrará el texto codificado/decodificado..."
-          readonly
-        ></textarea>
+        <div id="placeholderImage">
+          <img src="./img/busqueda.jpg" alt="Busqueda" />
+          <h2>Ningún mensaje fue encontrado</h2>
+          <p>Ingresa el texto que desees encriptar o desencriptar</p>
+        </div>
+
+        <div class="caja">
+          <textarea
+            id="outputText"
+            placeholder="Aquí se mostrará el texto codificado/decodificado..."
+            readonly
+          ></textarea>
+        </div>
       </div>
     </div>
     <script src="main.js"></script>
